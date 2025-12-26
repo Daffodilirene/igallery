@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image:url(bgcf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: rgba(101, 16, 16, 0.679);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: rgb(91, 48, 9);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    text-align: center;
+    width: 300px;
+}
+
+.card img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.caption {
+    margin: 15px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.buttons button {
+    background-color: rgb(81, 8, 8);
+    color: rgba(255, 255, 255, 0.773);
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: rgba(128, 39, 39, 0.875);
+}
+
+.footer {
+    background-color: rgba(129, 23, 23, 0.693);
+    color: white;
+    text-align: center;
+    padding: 12px;
+}

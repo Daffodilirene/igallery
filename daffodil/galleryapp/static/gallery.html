@@ -1,0 +1,55 @@
+<head>
+    <title>Interactive Image Gallery</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1>Image Gallery</h1>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <img id="galleryImage" src="coldcoffe.jpg"alt="Gallery Image">
+            <p class="caption" id="caption">Cold Coffee</p>
+
+            <div class="buttons">
+                <button onclick="prevImage()">Previous</button>
+                <button onclick="nextImage()">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        Daffodil Irene.S(25002685)
+    </footer>
+
+    <script>
+        let gallery = [
+            { src: "coldcoffe.jpg", text: "Cold Coffee" },
+            { src: "cp.jpeg", text: "Cappuccino" },
+            { src: "filter.jpg", text: "Filter Coffee" },
+            { src: "ice.jpg", text: "Americano" },
+            { src: "blackcoffe.jpg", text: "Black Coffee" }
+        ];
+        let index = 0;
+        function nextImage() {
+            index++;
+            if (index >= gallery.length) {
+                index = 0;
+            }
+            updateImage();
+        }
+        function prevImage() {
+            index--;
+            if (index < 0) {
+                index = gallery.length - 1;
+            }
+            updateImage();
+        }
+        function updateImage() {
+            document.getElementById("galleryImage").src = gallery[index].src;
+            document.getElementById("caption").innerText = gallery[index].text;
+        }
+    </script>
+</body>
+</html>
